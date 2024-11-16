@@ -5,6 +5,7 @@ import Aboutus from "./Componenets/Aboutus";
 import Services from "./Componenets/Services";
 import Gallery from "./Componenets/Gallery";
 import Promotions from "./Componenets/Promotions";
+import Blog from "./Componenets/Blog";
 
 const App = () => {
   return <div>
@@ -14,6 +15,7 @@ const App = () => {
     <Services/>
     <Gallery/>
     <Promotions/>
+    <Blog/>
   </div>;
 };
 
