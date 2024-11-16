@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+
 
 const Navbar = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section'); 
+      let currentSection = 'home'; 
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150; 
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentSection = section.getAttribute('id'); 
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    
+    window.addEventListener('scroll', handleScroll);
+
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div className="flex justify-between pl-5 pr-8 py-4 z-50 fixed w-[100%] bg-white">
       {/* logo */}
@@ -151,13 +180,27 @@ const Navbar = () => {
         </svg>
       </div>
       <div className="flex justify-between gap-5 pl-20 text-lg  my-auto">
-        <li className="active:text-[#f58220] active:list-none"><a href=''>Home</a></li>
-        <li>About Us</li>
-        <li>Services</li>
-        <li>Gallery</li>
-        <li>Promotions</li>
-        <li>Blogs</li>
-        <li>Contact Us</li>
+      <li className={activeSection === 'home' ? 'text-[#f58220]  list-none' : ''}>
+        <HashLink smooth to="#home">Home</HashLink>
+      </li>
+      <li className={activeSection === 'about' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#about">About Us</HashLink>
+      </li>
+      <li className={activeSection === 'services' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#services">Services</HashLink>
+      </li>
+      <li className={activeSection === 'gallery' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#gallery">Gallery</HashLink>
+      </li>
+      <li className={activeSection === 'promotions' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#promotions">Promotions</HashLink>
+      </li>
+      <li className={activeSection === 'blogs' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#blogs">Blogs</HashLink>
+      </li>
+      <li className={activeSection === 'contact' ? 'text-[#f58220] list-none' : ''}>
+        <HashLink smooth to="#contact">Contact Us</HashLink>
+      </li>
       </div>
       <div className="my-auto">
         <button className="text-lg  text-white bg-[#f58220] px-3 py-2 rounded-lg">Appointment</button>
