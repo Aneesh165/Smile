@@ -6,6 +6,7 @@ import Services from "./Componenets/Services";
 import Gallery from "./Componenets/Gallery";
 import Promotions from "./Componenets/Promotions";
 import Blog from "./Componenets/Blog";
+import Faq from "./Componenets/Faq";
 
 const App = () => {
   return <div>
@@ -16,6 +17,7 @@ const App = () => {
     <Gallery/>
     <Promotions/>
     <Blog/>
+    <Faq/>
   </div>;
 };
 
