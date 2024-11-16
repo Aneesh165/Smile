@@ -3,7 +3,7 @@ import Location from "../assets/Location.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#011016] w-[100%] h-[697px] text-white py-8">
+    <footer className="bg-[#011016] w-[100%] h-[650px] text-white py-8">
       <div className="ml-[51px] mt-[35px]">
         <svg
           width="188"
