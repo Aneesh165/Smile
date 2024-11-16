@@ -7,6 +7,7 @@ import Gallery from "./Componenets/Gallery";
 import Promotions from "./Componenets/Promotions";
 import Blog from "./Componenets/Blog";
 import Faq from "./Componenets/Faq";
+import BookingCrad from "./Componenets/BookingCrad";
 
 const App = () => {
   return <div>
@@ -18,6 +19,7 @@ const App = () => {
     <Promotions/>
     <Blog/>
     <Faq/>
+    <BookingCrad/>
   </div>;
 };
 
