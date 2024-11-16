@@ -8,6 +8,7 @@ import Promotions from "./Componenets/Promotions";
 import Blog from "./Componenets/Blog";
 import Faq from "./Componenets/Faq";
 import BookingCrad from "./Componenets/BookingCrad";
+import Footer from "./Componenets/Footer";
 
 const App = () => {
   return <div>
@@ -20,6 +21,7 @@ const App = () => {
     <Blog/>
     <Faq/>
     <BookingCrad/>
+    <Footer/>
   </div>;
 };
 
