@@ -1,8 +1,8 @@
 import React from "react";
 import LandingM from "../assets/Landingmain.png";
-import person1 from "../assets/Landingp1.jpeg";
-import person2 from "../assets/Landingp2.jpeg";
-import person3 from "../assets/Landingp3.jpeg";
+import person1 from "../assets/landingp1.jpeg";
+import person2 from "../assets/landingp2.jpeg";
+import person3 from "../assets/landingp3.jpeg";
 import teeth from "../assets/Frame1321315032.png"
 
 const Landing = () => {
