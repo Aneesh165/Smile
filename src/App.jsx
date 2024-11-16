@@ -4,6 +4,7 @@ import Landing from "./Componenets/Landing";
 import Aboutus from "./Componenets/Aboutus";
 import Services from "./Componenets/Services";
 import Gallery from "./Componenets/Gallery";
+import Promotions from "./Componenets/Promotions";
 
 const App = () => {
   return <div>
@@ -12,6 +13,7 @@ const App = () => {
     <Aboutus/>
     <Services/>
     <Gallery/>
+    <Promotions/>
   </div>;
 };
 
